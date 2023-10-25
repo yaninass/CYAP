@@ -11,5 +11,6 @@ with open("firms.txt","r",encoding="utf-8") as file:
             profits.append(profit)
 avarage_profit=sum(profits)/len(profits) if profits else 0
 result=[firms_profit,{"avarage_profit": avarage_profit}]# список хранит 2 словаря компании+прибыль, средняя прибыль
+
 with open("firms_profit.txt","w",encoding="utf-8") as outfile:
     json.dump(result,outfile,ensure_ascii=False,indent=4)
