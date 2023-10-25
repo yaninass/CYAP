@@ -11,6 +11,7 @@ def poisk(s):
     return int(num) if num else 0
 
 
+
 with open("subject.txt", "r", encoding="utf-8") as file:
     lines = file.readlines()
     for line in lines:

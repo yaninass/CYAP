@@ -1,6 +1,7 @@
 with open("student.txt","r",encoding="utf-8") as file:
     lines=file.readlines()
 students8=[]
+
 for line in lines:
     data=line.split()
     surname=data[0]
