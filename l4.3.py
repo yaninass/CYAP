@@ -1,42 +1,43 @@
+#coding: utf-8
 import time
 
 
 class TrafficLight:
     def __init__(self):
-        self.__color = "red"  # Атрибут color сделан приватным
-        self.__valid_sequence = ["red", "yellow", "green"]  # Последовательность цветов
+        self.__color = "red"  # РђС‚СЂРёР±СѓС‚ color СЃРґРµР»Р°РЅ РїСЂРёРІР°С‚РЅС‹Рј
+        self.__valid_sequence = ["red", "yellow", "green"]  # РџРѕСЃР»РµРґРѕРІР°С‚РµР»СЊРЅРѕСЃС‚СЊ С†РІРµС‚РѕРІ
 
     def change_color(self, color):
         if color in self.__valid_sequence:
             self.__color = color
         else:
-            print("Ошибка: Недопустимый цвет")
+            print("РћС€РёР±РєР°: РќРµРґРѕРїСѓСЃС‚РёРјС‹Р№ С†РІРµС‚")
 
     def running(self):
         while True:
             if self.__color == "red":
-                print("Светофор: Красный")
+                print("РЎРІРµС‚РѕС„РѕСЂ: РљСЂР°СЃРЅС‹Р№")
                 time.sleep(7)
                 self.change_color("yellow")
             elif self.__color == "yellow":
-                print("Светофор: Желтый")
+                print("РЎРІРµС‚РѕС„РѕСЂ: Р–РµР»С‚С‹Р№")
                 time.sleep(2)
                 self.change_color("green")
             elif self.__color == "green":
-                print("Светофор: Зеленый")
+                print("РЎРІРµС‚РѕС„РѕСЂ: Р—РµР»РµРЅС‹Р№")
                 time.sleep(5)
-                break  # Выход из цикла
+                break  # Р’С‹С…РѕРґ РёР· С†РёРєР»Р°
 
 
-# Создаем экземпляр класса и запускаем светофор
+# РЎРѕР·РґР°РµРј СЌРєР·РµРјРїР»СЏСЂ РєР»Р°СЃСЃР° Рё Р·Р°РїСѓСЃРєР°РµРј СЃРІРµС‚РѕС„РѕСЂ
 traffic_light = TrafficLight()
 traffic_light.running()
 while True:
-    user_input = input("Введите первый цвет сигнала (red/yellow/green) или (exit) для выхода: ")
+    user_input = input("Р’РІРµРґРёС‚Рµ РїРµСЂРІС‹Р№ С†РІРµС‚ СЃРёРіРЅР°Р»Р° (red/yellow/green) РёР»Рё (exit) РґР»СЏ РІС‹С…РѕРґР°: ")
     if user_input == "red":
         traffic_light.change_color(user_input)
         traffic_light.running()
     elif user_input == "exit":
         break
     else:
-        print("ошибка порядка режима")
+        print("РѕС€РёР±РєР° РїРѕСЂСЏРґРєР° СЂРµР¶РёРјР°")
