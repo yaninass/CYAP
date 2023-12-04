@@ -27,7 +27,7 @@ plt.show()
 # Заполняем пропуски в столбце 'LifeSquare' средним значением
 df_sample['LifeSquare'].fillna(df_sample['LifeSquare'].mean(), inplace=True)
 
-# Заполняем пропуски в столбце 'Healthcare_1' средним значением
+# Заполняем пропуски в столбце 'Healthcare_1' средним значение
 df_sample['Healthcare_1'].fillna(df_sample['Healthcare_1'].mean(), inplace=True)
 
 

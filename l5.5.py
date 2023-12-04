@@ -1,6 +1,6 @@
-import numpy as np
 import matplotlib.pyplot as plt
-from mpl_toolkits.mplot3d import Axes3D
+import numpy as np
+
 x = np.arange(-10, 11, 1)
 y = np.arange(-10, 11, 1)
 X, Y = np.meshgrid(x, y)
@@ -24,6 +24,7 @@ def func4(x, y):
 
 def func5(x, y):
     return 2 + 2 * x + 2 * y - x ** 2 - y ** 2
+
 
 fig, ax = plt.subplots(2, 3, figsize=(15, 10), subplot_kw={'projection': '3d'}, sharex=True, sharey=True)
 ax = ax.flatten()
